@@ -1,3 +1,52 @@
+"""
+Author - Jaideep Singh
+
+Problem Description - 
+
+Super simple stock market
+ 
+1. The Global Beverage Corporation Exchange is a new stock market trading in drinks companies.
+    a. Your company is building the OOPS system to run that trading
+    b. You have been assigned to build part of the core object model for a limited phase 1
+
+2. Provide the complete source code that will:
+    a. For a given stock,
+        i. Given any price input, calculate the dividend yield.
+       ii. Given any price input, calculate the P/E Ratio.
+      iii. Record trade, with timestamp, quantity, buy or sell indicator and price.
+       iv. Calculate Volume Weighted Stock Price based on trades in past 5 minutes.
+    
+    b. Calculate the GBCE All Share Index using the geometric mena of the Volume Weighted Stock Price for all stocks.
+
+Formulas to be used as part of this problem:
+
+1. Dividend Yield - The dividend yeild is the ratio of a company's annual dividend compared to its share price. While high dividend yields are attractive, they may come at the cost of growth potential. Every dollar a company is paying in dividends to its shareholders is a dollar that company is not re-investing to grow and generate capital gains. Shareholders can earn high returns if the value of their stock increases while they hold it.
+    a. Common - Last Dividend / Price
+    b. Preferred - (Fixed Dividend * Par Value) / Price
+    
+2. P/E Ratio - Price / Dividend
+    The P/E Ratio measures the relationship between a company's stock price and its earnings per share of stock issued.
+    
+3. Geometric Mean - nth root of product of "Volume weighted stock price".
+
+4. Volume weighted stock price - (summation(traded price * quantity))/summation(quantity)
+
+Dataset attribute descriptions based on my knowledge
+
+    a. Stock symbol - TIcker. A stock symbol is a unique series of letter assigned to a security for trading purposes. NYSE or AMEX have 3 characters or less. NASDAQ has 4-5 characters
+    
+    b. Type - Stock type(Common, preferred) - The main difference is that preferred stock usually do not give shareholders voting rights, while common stock does. With preferred shares, investors are usually garanted a fixed dividend.
+    
+    c. Last Dividend - Annual dividend per share.
+    
+    d. Fixed Dividend - For preferred stocks only.
+    
+    e. Par value - Par can refer to bonds, preferred stocks, common stocks or currencies, with different meanings depending on the context. Par most commonly refers to bonds, in which case it means the face value, or value at which bond will be redeemed at maturity.
+
+Asumptions : The stock symbol is unique in dataset. One stock symbol will have only one row in the given dataset.
+
+"""
+
 from datetime import datetime
 
 import pandas as pd
